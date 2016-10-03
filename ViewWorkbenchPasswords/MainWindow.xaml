@@ -1,0 +1,27 @@
+﻿<Window x:Class="EncryptedStuffViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EncryptedStuffViewer"
+        mc:Ignorable="d"
+        Title="Encrypted Stuff Viewer" Height="350" Width="520" Icon="mysql_workbench_password_viewer_icon.ico">
+    <Grid>
+        <Grid x:Name="MenuGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="DecryptStringOptionButton" Content="Decrypt string" Margin="10,10,5,10" Grid.Column="0" Click="DecryptStringOptionButton_Click"/>
+            <Button x:Name="DecryptFileOptionButton" Content="Decrypt file" Margin="5,10,10,10" Grid.Column="1" Click="DecryptFileOptionButton_Click"/>
+        </Grid>
+        <Grid x:Name="StringGrid" Margin="0" Visibility="Hidden">
+            <TextBox x:Name="InputStringTextBox" Margin="10,10,10,35" TextWrapping="Wrap"/>
+            <Button x:Name="DecryptStringButton" Content="Decrypt String" HorizontalAlignment="Right" Margin="0,0,10,10" Width="110" Height="20" VerticalAlignment="Bottom" Click="DecryptStringButton_Click"/>
+            <Button x:Name="MenuButton" Content="Menu" HorizontalAlignment="Left" Margin="10,0,0,10" Width="70" Height="20" VerticalAlignment="Bottom" Click="MenuButton_Click"/>
+        </Grid>
+        <Grid x:Name="OutputGrid" Margin="0" Visibility="Hidden">
+            <TextBox x:Name="Output" TextWrapping="Wrap" IsReadOnly="True" Margin="10,10,10,35"/>
+        </Grid>
+    </Grid>
+</Window>
